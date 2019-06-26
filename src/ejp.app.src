@@ -13,7 +13,7 @@
         kernel,
         stdlib
     ]},
-    {mod, {ejp, []}},
+    {mod, {ejp_app, []}},
     {env, []}
 ]}.
 
