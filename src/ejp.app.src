@@ -1,0 +1,19 @@
+%%%%----------------------------------------------
+%%% Module: ejp.app.src
+%%% Description: ejp application
+%%% Author:
+%%% Autogen:
+%%% wiki page -> [link to wiki or page name]
+%%%%----------------------------------------------
+{application, ejp, [
+    {description, "JSON Pointer for Erlang"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {mod, {ejp, []}},
+    {env, []}
+]}.
+
