@@ -1,5 +1,5 @@
-# ejp
-JSON Pointer for Erlang
+# JSON Pointer for Erlang
+## ejp
 
 Based on the [Project](https://github.com/janl/erl-jsonpointer)
 
