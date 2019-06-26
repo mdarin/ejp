@@ -52,9 +52,9 @@ set(Path, Json, Value) ->
 %%--------------------------------------------------------------------
 
 % value getter 
-get0([]=Path, Json) ->
+get0([], Json) ->
 	Json;
-get0([Key|RestPath]=Path, [Rec|_]=Array) when is_list(Rec) ->
+get0([Key|RestPath], [Rec|_]=Array) when is_list(Rec) ->
 	Idx = binary_to_integer(Key),
 	case Idx >= 0 andalso Idx < length(Array) of
 		true ->
@@ -62,7 +62,7 @@ get0([Key|RestPath]=Path, [Rec|_]=Array) when is_list(Rec) ->
 		_ ->
 			throw({error, invalid_array_index})
 	end;
-get0([Key|RestPath]=Path, Props) ->
+get0([Key|RestPath], Props) ->
 	case lists:keysearch(Key, 1, Props) of
 		{value, {Key, Value}} ->
 			get0(RestPath, Value);
@@ -76,7 +76,7 @@ get0(_Path, _Json) ->
 % value setter
 set0([]=_Path, _Json, Value) ->
 	Value;
-set0([Key|RestPath]=Path, [Rec|_]=Array, Value) when is_list(Rec) ->
+set0([Key|RestPath], [Rec|_]=Array, Value) when is_list(Rec) ->
 	Idx = list_to_integer(binary_to_list(Key)),
 	case Idx >= 0 andalso Idx < length(Array) of
   	true ->

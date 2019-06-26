@@ -17,6 +17,8 @@ $ ./rebar eunit
 $ erl
 ```
 
+Setup path to ebin directory before start
+
 ```erlang
 1> code:add_path("/home/user/src/ejp/ebin").
 true
