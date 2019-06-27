@@ -52,7 +52,7 @@ true
 ```
 ok
 ```
-```eralng
+```erlang
 4> application:stop(ejp).
 ```
 ```
@@ -63,7 +63,8 @@ ok
 ok
 ```
 ### Usage examples
-```erlagn
+
+```erlang
 6> ejp:get_test_model_json().
 ```
 ```
